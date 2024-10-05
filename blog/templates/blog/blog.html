@@ -1,10 +1,8 @@
 {% extends "core/base.html" %}
 {% load static %}
-
 {% block title %}Blog{% endblock %}
-
-
 {% block content %}
+{% include 'blog/includes/blog_menu.html' %}
   {% for post in posts %}
     <section class="page-section cta">
       <div class="container">
@@ -24,7 +22,7 @@
                   Publicado por <em><b>{{post.author}}</b></em> en
                   <em>
                   {% for category in post.categories.all %}
-                      <a href="{% url 'category' category.id %}" class="link"> {{category.name}}</a>{% if not forloop.last %},{%endif%}
+                      <a href="{% url 'blogs:category' category.id %}" class="link"> {{category.name}}</a>{% if not forloop.last %},{%endif%}
                   {% endfor %}
                   </em>
               </span>

@@ -24,7 +24,10 @@
             <!-- Campos -->
             <div class="col-md-10">
               <h3>{{profile.user}}</h3>
+            </br>
+              <a><strong>Biografía:</strong></a>
               {% if profile.bio %}<p>{{profile.bio}}</p>{% endif %}
+              <a><strong>Enlace a redes:</strong></a>
               {% if profile.link %}<p><a href="{{profile.link}}" target="_blank">{{profile.link}}</a></p>{% endif %}
             </div>
           </div>

@@ -35,23 +35,23 @@
               <a class="nav-link" href="{% url 'profiles:list' %}">Perfiles</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+              <a class="nav-link" href="{% url 'blogs:blog' %}">Blog</a>
             </li>
             </ul>
             <ul class="navbar-nav">
               {% if not request.user.is_authenticated %}
                <li class="nav-item">
-                <a class="nav-link" href="{% url 'login' %}">Acceder</a>
+                <a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a>
                </li>
                <li class="nav-item">
-                <a class="nav-link" href="{% url 'signup' %}">Registro</a>
+                <a class="nav-link" href="{% url 'signup' %}">Registrarse</a>
                </li>
               {% else %}
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'messenger:list' %}">Mensajes</a>
+                <a class="nav-link" href="{% url 'messenger:list' %}">Mis mensajes</a>
               </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'profile' %}">Perfil</a>
+                  <a class="nav-link" href="{% url 'profile' %}">Mi perfil</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'logout' %}">Salir</a>

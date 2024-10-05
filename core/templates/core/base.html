@@ -34,6 +34,9 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'profiles:list' %}">Perfiles</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+            </li>
             </ul>
             <ul class="navbar-nav">
               {% if not request.user.is_authenticated %}

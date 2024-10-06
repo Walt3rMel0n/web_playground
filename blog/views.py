@@ -21,5 +21,5 @@ def category(request, category_id):
 @method_decorator(login_required, name='dispatch')    
 class BlogCreate(CreateView):
     model = Post
-    fields = ['title', 'content', 'published', 'author', 'categories']
+    fields = ['title', 'content', 'published', 'author', 'image', 'categories']
     success_url = reverse_lazy('blogs:blog')

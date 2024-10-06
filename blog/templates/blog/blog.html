@@ -23,7 +23,7 @@
                   <em>
                   {% for category in post.categories.all %}
                       <a href="{% url 'blogs:category' category.id %}" class="link"> {{category.name}}</a>{% if not forloop.last %},{%endif%}
-                  {% endfor %}
+                    {% endfor %}
                   </em>
               </span>
               </p>

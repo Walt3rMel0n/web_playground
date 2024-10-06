@@ -3,7 +3,7 @@
 <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
 <link href="{% static 'pages/css/custom_ckeditor.css' %}" rel="stylesheet">
 
-{% if request.user.is_staff %}
+{% if request.user.is_authenticated %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
     <span class="navbar-brand" href="#"><i>Administrar</i></span>

@@ -12,7 +12,7 @@
           <div>
             <p>{{page.content|striptags|safe|truncatechars:"200"}}</p>
             <p><a href="{% url 'pages:page' page.id page.title|slugify %}">Leer más</a>
-              {% if request.user.is_staff %}
+              {% if request.user.is_authenticated %}
                 | <a href="{% url 'pages:update' page.id %}">Editar</a>
                 | <a href="{% url 'pages:delete' page.id %}">Borrar</a>
               {% endif %}

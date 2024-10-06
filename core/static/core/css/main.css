@@ -138,6 +138,11 @@ p {
   margin: 0.5rem;
   background-color: rgba(0, 0, 0, 0.078);
 }
+.contenido {
+  margin: 0; /* Elimina el margen del cuerpo */
+  padding: 0; /* Elimina el relleno del cuerpo */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
 
 
 

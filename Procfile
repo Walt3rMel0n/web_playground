@@ -1,1 +1,1 @@
-web: gunicorn webplayground.wsgi
+web: python manage.py collectstatic && gunicorn webplayground.wsgi

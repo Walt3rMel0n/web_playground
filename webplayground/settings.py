@@ -18,7 +18,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-ENVIRONMENT= os.getenv('ENVIRONMENT', default='production')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -94,15 +93,10 @@ WSGI_APPLICATION = 'webplayground.wsgi.application'
 #DATABASES = {
  #   'default': dj_database_url.config(os.getenv('DATABASE_URL'))
 #}
-#postgresql://postgres:iBXVwpkXAblZaEzmBqwMXTxIpxZOLzDM@postgres.railway.internal:5432/railway
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'iBXVwpkXAblZaEzmBqwMXTxIpxZOLzDM',
-        'HOST': 'postgres.railway.internal',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

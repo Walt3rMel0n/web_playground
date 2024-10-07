@@ -16,6 +16,8 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
+
+
 ENVIRONMENT= os.getenv('ENVIRONMENT', default='production')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

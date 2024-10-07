@@ -33,8 +33,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 
-#ALLOWED_HOSTS = ['localhost','https://web-production-c5fb.up.railway.app']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost','https://web-production-c5fb.up.railway.app', '127.0.0.1']
 
 
 # Application definition
@@ -95,8 +94,8 @@ WSGI_APPLICATION = 'webplayground.wsgi.application'
 #}
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': os.getenv('engine'),
+        'NAME': BASE_DIR / os.getenv('name'),
     }
 }
 

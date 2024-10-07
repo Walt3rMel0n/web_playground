@@ -36,7 +36,7 @@ def add_message(request, pk):
             message = Message.objects.create(user=request.user, content=content)
             thread.messages.add(message)
             json_response["created"] = True
-            if len(thread.messages.all()) is 1:
+            if len(thread.messages.all()) == 1:
                 json_response['first'] = True 
     else:
         raise Http404("User is not authenticated")

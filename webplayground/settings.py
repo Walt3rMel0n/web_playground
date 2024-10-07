@@ -92,8 +92,7 @@ WSGI_APPLICATION = 'webplayground.wsgi.application'
  #   'default': dj_database_url.config(os.getenv('DATABASE_URL'))
 #}
 DATABASES = {
-    'default': dj_database_url.config('postgresql://postgres:iBXVwpkXAblZaEzmBqwMXTxIpxZOLzDM@postgres.railway.internal:5432/railway'
-    )
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 }
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

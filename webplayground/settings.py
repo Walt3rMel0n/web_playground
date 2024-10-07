@@ -33,7 +33,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['localhost','https://web-production-c5fb.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['web-production-c5fb.up.railway.app','localhost','https://web-production-c5fb.up.railway.app', '127.0.0.1']
 
 
 # Application definition

@@ -17,6 +17,7 @@ pylint==3.3.0
 pylint-celery==0.3
 pylint-django==2.5.5
 pylint-plugin-utils==0.8.2
+python-decouple==3.8
 python-dotenv==1.0.1
 sqlparse==0.5.1
 tomli==2.0.1
